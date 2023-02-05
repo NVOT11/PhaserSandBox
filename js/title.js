@@ -18,7 +18,7 @@ export default class Title_Scene extends Phaser.Scene {
             { font: '20px Arial' }).setInteractive().setOrigin(0.5).setTint(0xff00ff, 0xffff00, 0x0000ff, 0xff0000);
 
         start.on('pointerdown', function (pointer) {
-            this.scene.start('Sub_Scene');
+            this.scene.start('Main_Scene');
         }, this);
     }    
 }

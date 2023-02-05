@@ -5,19 +5,19 @@ export default class Load_Scene extends Phaser.Scene {
     constructor() {
         super('Load_Scene');
     }
-    
+
     preload() {
         this.load.image('back', 'assets/back.png');
+        this.load.image('player', 'assets/player.png');
         this.load.spritesheet('witch', 'assets/witch.png', { frameWidth: 32, frameHeight: 32 });
     }
 
     create() {
-        this.createAnims();    
-        this.scene.start('Title_Scene');    
+        this.createAnims();
+        this.scene.start('Title_Scene');
     }
-    
-    createAnims()
-    {
+
+    createAnims() {
         this.anims.create({
             key: 'up',
             frames: this.anims.generateFrameNumbers('witch', { start: 9, end: 11 }),
@@ -43,5 +43,5 @@ export default class Load_Scene extends Phaser.Scene {
             repeat: -1
         });
     }
-    
+
 }
